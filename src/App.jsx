@@ -19,9 +19,9 @@ function App() {
   // },[]);
   
   return (
-    <>
+    <div className=" text-primary">
       Let's start building here front page
-    </>
+    </div>
   )
 }
 
