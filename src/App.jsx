@@ -1,20 +1,30 @@
-import { useState,useEffect } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import SubjectCard from './components/SubjectCard'
-import CourseCard from './components/CourseCard'
+import { useState, useEffect } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./components/Home";
+import "./App.css";
+import Navbar from "./components/navbar";
 
 function App() {
-  const [count, setCount] = useState(0);
-  const [backendData , setBackendData] = useState([{}]);
-  
   return (
-    
-    <div>
+    <>
+    <Navbar />
+    <BrowserRouter>
+      <Routes>
+        {/* <Route path="/" element={<Layout />}> */}
+          <Route index element={<Home />} />
+          {/* <Route path="blogs" element={<Blogs />} />
+          <Route path="contact" element={<Contact />} />
+        <Route path="*" element={<NoPage />} /> */}
+        {/* </Route> */}
+      </Routes>
+    </BrowserRouter>
+    <Footer />
+    </>
 
-    </div>
+
   )
 }
 
-export default App
+export default App;
