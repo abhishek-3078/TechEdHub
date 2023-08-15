@@ -1,12 +1,11 @@
 import React from 'react'
 import './Home_CSS.css'
-import Navbar from './navbar'
-import Footer from './footer'
+
 
 const Home = () => {
   return (
     <div>
-      <Navbar />
+   
       <main className="h-[400px]">
       <div className="  h-full top-0 z-20 left-0">
         <video autoPlay muted loop height={'400px'} className=" border-2 ">
@@ -22,7 +21,7 @@ const Home = () => {
         <button className='btn btn-primary font-sans p-4 text-4xl rounded-3xl '>Get Started</button>
      </div>
       </main>
-      <Footer />
+
       </div>
   )
 }

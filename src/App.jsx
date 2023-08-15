@@ -5,12 +5,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import {Home,RoadMap} from './components'
 import "./App.css";
 import Navbar from "./components/navbar";
+import Footer from "./components/footer";
 
 function App() {
   return (
     <>
-    <Navbar />
     <BrowserRouter>
+    <Navbar />
       <Routes>
         {/* <Route path="/" element={<Layout />}> */}
           <Route index element={<Home />} />
@@ -20,8 +21,8 @@ function App() {
         <Route path="*" element={<NoPage />} /> */}
         {/* </Route> */}
       </Routes>
-    </BrowserRouter>
     <Footer />
+    </BrowserRouter>
     </>
 
 
