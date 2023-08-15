@@ -11,6 +11,7 @@ export default {
       lg: '976px',
       xl: '1440px',
     },
+
     fontFamily: {
       heading:['Poppins','serif'],
       sans: ['Graphik', 'sans-serif'],
