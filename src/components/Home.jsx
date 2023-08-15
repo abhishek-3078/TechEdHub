@@ -47,7 +47,10 @@ const Home = () => {
       clearInterval(typingInterval);
     };
   }, [placeholders]);
-
+  useEffect(()=>{
+    const url='http://localhost:3000'
+    fetch(url).then().then(res=>res.toString()).then(res=>console.log(res.body))
+  },[])
   return (
     <div>
       <main className=" bg-primary1 relative  ">
