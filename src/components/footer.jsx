@@ -3,7 +3,6 @@ import React from 'react'
 const Footer = () => {
   return (
     <div>
-        <div className="text-white">hello this is on top</div>
       
       <div className="">
         {/* Footer */}
