@@ -4,6 +4,7 @@ import viteLogo from "/vite.svg";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import {Home,RoadMap} from './components'
 import "./App.css";
+
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
 import AdminPanel from "./components/adminpanel"
