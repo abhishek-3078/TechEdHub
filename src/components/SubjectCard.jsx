@@ -1,5 +1,4 @@
 import React from "react";
-// import {}
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
 
 const SubjectCard = () => {
