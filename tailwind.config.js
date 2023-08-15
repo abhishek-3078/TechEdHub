@@ -11,7 +11,7 @@ export default {
       lg: '976px',
       xl: '1440px',
     },
-   
+
     fontFamily: {
       heading:['Poppins','serif'],
       sans: ['Graphik', 'sans-serif'],
@@ -20,8 +20,10 @@ export default {
     extend: {
       colors: {
         'primary':"#14235D",
-        'secondary':'#136EFD',
-      },
+        'primary1':"#14235D",
+         'secondary':'#136EFD'
+        
+      }
     },
   },
   plugins: [],
