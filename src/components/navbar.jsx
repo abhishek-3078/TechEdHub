@@ -6,6 +6,11 @@ const Navbar = () => {
         <div className="">
       <div className="navbar bg-[#000000] p-[10px]" id="navbarID">
         <ul className="nav">
+          <li>
+              <a class="navbar-brand" href="/">
+                  <img src="https://i0.wp.com/www.theloremipsumco.com/wp-content/uploads/2016/07/LoremIpsumLogo.png?fit=600%2C138&ssl=1" className="LogoImg" width="30" height="30" alt="" />
+              </a>
+          </li>
           <li className="nav-item m-[5px]" id="navitem1">
             <a className="nav-link active" href="#">
               Active
