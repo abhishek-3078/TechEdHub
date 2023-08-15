@@ -9,6 +9,11 @@ const Home = () => {
       i = (i + 1) % i.length;
     }
   };
+  const logou=async()=>{
+    const res=await fetch("http://localhost:3000/logout")
+    const data=res.json()
+    console.log(data)
+  }
   const placeholders = [
     "javascript",
     "python",
@@ -87,8 +92,8 @@ const Home = () => {
               ea veritatis, quisquam omnis iure.
             </div>
             <div className="flex justify-center">
-              <button className="px-10 py-[18px] text-white text-3xl bg-green-500/80 active:bg-green-700 rounded-full ">
-                Get Started
+              <button className="px-10 py-[18px] text-white text-3xl bg-green-500/80 active:bg-green-700 rounded-full " onClick={logou}>
+                LogOut
               </button>
             </div>
           </div>

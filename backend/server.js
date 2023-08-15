@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const cors=require('cors')
 const bcrypt = require('bcrypt');
+const cookieParser = require('cookie-parser');
+
 var jwt = require('jsonwebtoken');
 require('dotenv').config()
 const User=require('./schema/user')
@@ -11,6 +13,8 @@ require('./db')
 app.use(cors())
 app.use(express.urlencoded())
 app.use(express.json())
+app.use(cookieParser());
+
 
 app.get('/',(req,res)=>{
     res.send("hello");
@@ -51,7 +55,7 @@ app.post('/login',async(req,res)=>{
         if(!isMatched) {
             return res.send({success:false,message:"invalid credentials"})
     }   
-        res.send({success:true,message:"successfully login"})
+    res.cookie('token', userData.email, { maxAge: 3600000 }).redirect('http://localhost:5173'); // Expires in 1 hour
     }catch(e){
         res.send({success:false,message:e.message})
     }
