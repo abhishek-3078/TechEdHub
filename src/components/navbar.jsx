@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './navbarCSS.css'
+import { Link } from 'react-router-dom';
 
 
 
@@ -90,7 +91,8 @@ const Navbar = () => {
 
 
       <div className='loginSign_UpContainer'>
-
+      <Link to='/login' className='no-underline'>login</Link>
+      <Link to='/signup' className='no-underline  '>Sign Up</Link>
       </div>
     </nav>
 

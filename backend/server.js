@@ -55,10 +55,28 @@ app.post('/login',async(req,res)=>{
         if(!isMatched) {
             return res.send({success:false,message:"invalid credentials"})
     }   
-    res.cookie('token', userData.email, { maxAge: 3600000 }).redirect('http://localhost:5173'); // Expires in 1 hour
+    res.cookie('token', "gcgcj", { maxAge: 360000}).redirect('http://localhost:5173'); // Expires in 1 hour
     }catch(e){
         res.send({success:false,message:e.message})
     }
+})
+
+app.get('/logout',(req,res)=>{
+    console.log("helko")
+    // res.clearCookie('token',{
+    //     path:'/',
+    //     domain:'localhost'
+    // })
+    try{
+        console.log("hello");
+        res.clearCookie('token').redirect('http://localhost:5173/login')
+    }catch(e){
+        console.log(e)
+    }
+    // res.cookie('token',"",{expires: new Date(0)})
+    // res.cookie('token',"abhishek",{maxAge:10})
+    // res.clearCookie('token')
+    // res.send({message:"successfully logout"})
 })
 app.listen(3000,()=>{
     console.log(`server is listeing on the port ${PORT}`);
