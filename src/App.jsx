@@ -9,7 +9,11 @@ import Footer from "./components/footer";
 import LoginDiv from "./components/LoginDiv";
 import Newsbox from "./components/Newsbox";
 import AdminPanel from "./components/adminpanel"
+
+import CourseBox from "./components/courseBox";
+import CourseTemplate from "./components/CourseTemplate";
 import NavbarWrapper , {FooterWrapper} from "./components/NavbarWrapper";
+
 
 function App() {
   return (
@@ -25,6 +29,9 @@ function App() {
           <Route path ="/login" element={<Login/>}/>
           <Route path ="/signup" element={<SignUp/>}/>
 
+
+    {/* <StudentDashboard/> */}
+    <CourseTemplate/>
       </Routes>
     <FooterWrapper />
     </BrowserRouter>

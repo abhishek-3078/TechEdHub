@@ -2,8 +2,8 @@ nav
 {
     /* background-color: rgba(53,58,64,255); */
     /* background-image: transparent; */
-    /* background-color: rgba(255, 255, 255, .2); */
-    background-color: rgb(35, 35, 35);
+    background-color: rgba(255, 255, 255, .2);
+    /* background-color: rgb(35, 35, 35); */
     backdrop-filter: blur(20px);
     height: 78px;
     margin: 0px;
