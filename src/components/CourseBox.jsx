@@ -87,7 +87,7 @@ const CourseBox = () => {
                 </div>
             </form>
         </div>
-                <div className="CoursePanel">
+                <div className="CoursePanel scrollbar-thin scrollbar-track-slate-900 scrollbar-thumb-gray-500">
 
 
                     {courses.map((course, index)=>
