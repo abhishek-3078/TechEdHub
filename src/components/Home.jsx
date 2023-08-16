@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
-import "./Home_CSS.css";
+import { API } from "../assets/constant";
+import LoginDiv from "./LoginDiv";
+
 
 const Home = () => {
   const [inputValue, setInputValue] = useState("");
@@ -9,10 +11,20 @@ const Home = () => {
       i = (i + 1) % i.length;
     }
   };
-  const logou=async()=>{
-    const res=await fetch("http://localhost:3000/logout")
-    const data=res.json()
-    console.log(data)
+  const logout = async()=>{
+    const res=await fetch(`${API}/logout`)
+    const data=await res.json()
+    if(data.success){
+      localStorage.removeItem('token')
+      window.location.href="/login"
+    }
+    // ,{
+    //   method: 'GET',
+    //   credentials: 'include'
+    // })
+    // const data=await res.json()
+    // console.log(data)
+    // window.location.assign(`${API}/logout`)
   }
   const placeholders = [
     "javascript",
@@ -60,6 +72,7 @@ const Home = () => {
     <div>
       <main className=" bg-primary1 relative  ">
         <div className="p-4 flex flex-col justify-evenly relative overflow-hidden bg-none">
+        <LoginDiv/>
           <div className=" absolute h-full w-[2400px] top-0   left-0 ">
             <video autoPlay muted loop className=" w-border-2  ">
               <source src="/videos/video_bg.mp4" type="video/mp4" />
@@ -76,9 +89,9 @@ const Home = () => {
               <div className="flex w-[500px]">
                 <input
                   type="text"
-                  value={inputValue}
+                  value={inputValue} onChange={(e)=>setInputValue(e.target.value)}
                   placeholder={searchPlaceholder}
-                  className="bg-white/20 p-3 rounded-l-[0.375rem]  border-b-2 border-primary1 w-[400px] placeholder:text-2xl pl-4"
+                  className="bg-white/20 p-3 rounded-l-[0.375rem] text-2xl text-white border-b-2 border-primary1 w-[400px]  pl-4"
                 />
                 <div className="bg-primary1 text-2xl text-white p-3 rounded-r-[0.375rem]">
                   Search
@@ -92,9 +105,9 @@ const Home = () => {
               ea veritatis, quisquam omnis iure.
             </div>
             <div className="flex justify-center">
-              <button className="px-10 py-[18px] text-white text-3xl bg-green-500/80 active:bg-green-700 rounded-full " onClick={logou}>
+              <div className="px-10 py-[18px] text-white text-3xl bg-green-500/80 active:bg-green-700 rounded-full " onClick={logout}>
                 LogOut
-              </button>
+              </div>
             </div>
           </div>
         </div>
