@@ -103,7 +103,7 @@ const Home = () => {
               just about anything in Technology!
             </div>
             <div className="flex justify-center">
-              <div className="px-10 py-[18px] text-white text-3xl bg-green-500/80 active:bg-green-700 rounded-full " onClick={logou}>
+              <div className="px-10 py-[18px] text-white text-3xl bg-green-500/80 active:bg-green-700 rounded-full " onClick={logout}>
                 Get Started              </div>
             </div>
           </div>

@@ -29,12 +29,11 @@ function App() {
           <Route path ="/login" element={<Login/>}/>
           <Route path ="/signup" element={<SignUp/>}/>
 
-
-    {/* <StudentDashboard/> */}
-    <CourseTemplate/>
+    {/* <CourseTemplate/> */}
       </Routes>
     <FooterWrapper />
     </BrowserRouter>
+    {/* <CourseTemplate/> */}
     </>
   )
 }
