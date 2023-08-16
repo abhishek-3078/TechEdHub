@@ -9,7 +9,7 @@ import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
 import AdminPanel from "./components/adminpanel"
 import StudentDashboard from "./components/SubjectDashboard";
-
+import CourseTemplate from "./components/CourseTemplate";
 
 function App() {
   return (
@@ -35,7 +35,8 @@ function App() {
     <Footer />
     </BrowserRouter> */}
 
-    <StudentDashboard/>
+    {/* <StudentDashboard/> */}
+    <CourseTemplate/>
     </>
 
 
