@@ -3,9 +3,8 @@ import React from 'react'
 const Footer = () => {
   return (
     <div>
-        <div className="text-white">hello this is on top</div>
       
-      <div className="container-fluid my-5">
+      <div className="">
         {/* Footer */}
         <footer className="text-center text-lg-start text-white" style={{backgroundColor: '#1c2331'}}>
           {/* Section: Social media */}

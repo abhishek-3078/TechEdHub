@@ -1,24 +1,27 @@
 import './login.css';
 function Login() {
+    const url='http://'
+    const handleSubmit=async()=>{
+    //    const res= await fetch(url)
+    }
     return (
         <div className='body'>
             <img src="http://wallpapercave.com/wp/ntYEFqo.jpg" alt="" />
             <div className="wrapper">
-                <form action="/login" method="post" id="loginForm">
+                <form action="http://localhost:3000/login" method="post" id="loginForm" >
                     <h1>Login</h1>
                     <div className="input-box">
                         <input
-                            type="tel"
-                            placeholder="Enter your registered mobile no."
+                            type="email"
+                            placeholder="Enter your email"
                             autoComplete="off"
-                            name="mobile"
-                            maxLength={10}
-                            required=""
+                            name="email"
+                            
                         />
                         <img
                             src="https://cdn-icons-png.flaticon.com/128/456/456212.png"
                             alt="user"
-                        />
+                        /> 
                     </div>
                     <div className="input-box">
                         <input
