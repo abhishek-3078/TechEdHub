@@ -8,18 +8,15 @@ import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import LoginDiv from "./components/LoginDiv";
 import Newsbox from "./components/Newsbox";
-
 import AdminPanel from "./components/adminpanel"
-import CourseBox from "./components/courseBox";
-
+import NavbarWrapper , {FooterWrapper} from "./components/NavbarWrapper";
 
 function App() {
   return (
     <>
-    {/* <Navbar/>
-    <BrowserRouter> */}
-    {/* <Navbar /> */}
-      {/* <Routes> */}
+    <BrowserRouter>
+    <NavbarWrapper />
+      <Routes>
       
         {/* <Route path="/" element={<Layout />}> */}
           {/* <Route path="/userprofile/:user" element={<AdminPanel/>}></Route>
@@ -33,14 +30,10 @@ function App() {
           <Route path="contact" element={<Contact />} />
         <Route path="*" element={<NoPage />} /> */}
         {/* </Route> */}
-      {/* </Routes>
-    <Footer />
-    </BrowserRouter> */}
-
-    <StudentDashboard/>
+      </Routes>
+    <FooterWrapper />
+    </BrowserRouter>
     </>
-
-
   )
 }
 

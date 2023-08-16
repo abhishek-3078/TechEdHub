@@ -9,10 +9,14 @@ const Home = () => {
       i = (i + 1) % i.length;
     }
   };
-  const logou=async()=>{
-    const res=await fetch("http://localhost:3000/logout")
-    const data=res.json()
-    console.log(data)
+  const logou = async()=>{
+    // const res=await fetch("http://localhost:3000/logout",{
+    //   method: 'GET',
+    //   credentials: 'include'
+    // })
+    // const data=await res.json()
+    // console.log(data)
+    window.location.assign("http://localhost:3000/logout")
   }
   const placeholders = [
     "javascript",
@@ -76,9 +80,9 @@ const Home = () => {
               <div className="flex w-[500px]">
                 <input
                   type="text"
-                  value={inputValue}
+                  value={inputValue} onChange={(e)=>setInputValue(e.target.value)}
                   placeholder={searchPlaceholder}
-                  className="bg-white/20 p-3 rounded-l-[0.375rem]  border-b-2 border-primary1 w-[400px] placeholder:text-2xl pl-4"
+                  className="bg-white/20 p-3 rounded-l-[0.375rem] text-2xl text-white border-b-2 border-primary1 w-[400px]  pl-4"
                 />
                 <div className="bg-primary1 text-2xl text-white p-3 rounded-r-[0.375rem]">
                   Search
