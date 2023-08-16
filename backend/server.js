@@ -55,7 +55,7 @@ app.post('/login',async(req,res)=>{
         if(!isMatched) {
             return res.send({success:false,message:"invalid credentials"})
     }   
-    res.cookie('token', "gcgcj", { maxAge: 360000}).redirect('http://localhost:5173'); // Expires in 1 hour
+    res.cookie('token', userData.email, { maxAge: 360000}).redirect('http://localhost:5173'); // Expires in 1 hour
     }catch(e){
         res.send({success:false,message:e.message})
     }

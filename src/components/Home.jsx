@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
-import "./Home_CSS.css";
+import { API } from "../assets/constant";
+
 
 const Home = () => {
   const [inputValue, setInputValue] = useState("");
@@ -16,7 +17,7 @@ const Home = () => {
     // })
     // const data=await res.json()
     // console.log(data)
-    window.location.assign("http://localhost:3000/logout")
+    window.location.assign(`${API}/logout`)
   }
   const placeholders = [
     "javascript",
@@ -96,9 +97,9 @@ const Home = () => {
               ea veritatis, quisquam omnis iure.
             </div>
             <div className="flex justify-center">
-              <button className="px-10 py-[18px] text-white text-3xl bg-green-500/80 active:bg-green-700 rounded-full " onClick={logou}>
+              <div className="px-10 py-[18px] text-white text-3xl bg-green-500/80 active:bg-green-700 rounded-full " onClick={logou}>
                 LogOut
-              </button>
+              </div>
             </div>
           </div>
         </div>
