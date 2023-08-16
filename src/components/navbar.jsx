@@ -1,6 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import './navbarCSS.css'
 import { Link } from 'react-router-dom';
+import { API } from '../assets/constant';
+import LoginDiv from "./LoginDiv";
 
 
 
@@ -24,10 +26,11 @@ let arrayOfTabs = [
 ]
 const Logo = (props) => {
   const link = props.link;
+  
   return (
-    <a href={link}>
+    <a href='/'>
 
-      <img src="https://i0.wp.com/edtechhub.org/wp-content/uploads/2022/01/EdTech-Hub-Logotype-WM-4.png?fit=400%2C173&ssl=1" alt="Tech Ed Hub" />
+      <img src="src\components\TechEdHubLogo-fotor-bg-remover-2023081622354.png" alt="Tech Ed Hub" />
     </a>
   )
 }
@@ -72,6 +75,42 @@ const NavTab = () => {
 
 const Navbar = () => {
 
+  const [userName,setUserName] = useState(null);
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    // Define the URL for the API endpoint
+    const apiUrl =`${API}/getUser` ;
+    const token=localStorage.getItem('token')
+    // Use the fetch function to make the request
+    fetch(apiUrl,{
+      headers:{
+        "Authorization":token
+      }
+    }).then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      }).then(data => {
+        console.log(data)
+        // setData(data); // Update state with fetched data
+        localStorage.setItem({userdata : data});
+        setUserName(data.fullname);
+        setLoading(false); // Set loading to false
+      }).catch(error => {
+        setError(error); // Set error state if the fetch fails
+        setLoading(false); // Set loading to false
+      });
+  }, []); 
+
+  if(userName != null){
+    var userFirstNameChar = userName[0].toUpperCase();
+  }
+
+
 
 
 
@@ -89,10 +128,17 @@ const Navbar = () => {
 
 
       <div className='loginSign_UpContainer'>
-        <div class="container">
-           <Link to="/login"><button class="log">Login</button></Link> 
-            <Link to="/signup"><button class="reg">Sign up</button></Link>
+        <div className="container">
+          {userName != null ? <div className='userImg rounded-full h-10 w-10 text-white text-3xl leading-[100
+          %] bg-slate-500'>{userFirstNameChar}  </div> :
+            <>
+            <Link to="/login"><button className="log">Login</button></Link> 
+            <Link to="/signup"><button className="reg">Sign up</button></Link>
+            </>
+          }
+         
         </div>
+        
       </div>
     </nav>
 
