@@ -23,7 +23,7 @@ const CourseCard = (props) => {
 
     return (
 
-        <div className="card min-w-[250px] w-[250px] flex rounded-lg bg-secondary hover:scale-105 ease-in-out duration-300 mt-2 mb-2 mr-5 shadow hover:shadow-lg shrink-0	" onMouseOver={()=>{setShowInfo(false)}} onMouseOut={()=>{setShowInfo(true)}}>
+        <div className="card min-w-[250px] w-[250px] flex rounded-lg bg-gradient-to-t from-gray-900 to-gray-600 hover:scale-105 ease-in-out duration-300 mt-2 mb-2 mr-5 shadow hover:shadow-lg shrink-0	" onMouseOver={()=>{setShowInfo(false)}} onMouseOut={()=>{setShowInfo(true)}}>
             <img src= {props.Image} className="card-img-top w-[250px] h-[200px]" alt="..." />
 
             <div className="card-body">

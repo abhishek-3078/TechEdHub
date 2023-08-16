@@ -12,6 +12,7 @@ import Newsbox from "./components/Newsbox";
 import AdminPanel from "./components/adminpanel"
 import CourseBox from "./components/courseBox";
 import CourseTemplate from "./components/CourseTemplate";
+import StudentDashboard from "./components/SubjectDashboard";
 
 function App() {
   return (
@@ -37,8 +38,9 @@ function App() {
     <Footer />
     </BrowserRouter> */}
 
-    {/* <StudentDashboard/> */}
-    <CourseTemplate/>
+    <StudentDashboard/>
+    {/* <CourseTemplate/> */}
+    
     </>
 
 

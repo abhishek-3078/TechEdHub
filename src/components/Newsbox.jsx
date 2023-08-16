@@ -28,7 +28,7 @@ const Newsbox = () => {
     <div class="newsBoxContainer">
 
         <div class="newsBoxTitle">
-            <h2>Tech Today</h2>
+            <h2>Industry Insights</h2>
         </div>
 
         <div class="newsBoxContentBox">
