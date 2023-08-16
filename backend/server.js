@@ -21,18 +21,27 @@ app.get('/',(req,res)=>{
 
 app.get('/getUser',async (req,res)=>{
     const token=req.headers.authorization
-
-    if(!token) return res.status(401).send()
-    const {email:Email,exp}=jwt.verify(token,process.env.KEY)
-    if(new Date().getTime()/1000 > exp){
-        return res.status(401).send({message:"token expired"})
+    console.log("token: " , token ,typeof(token));
+    if(token == "null") {
+        console.log("in null token");
+        return res.status(401).send()
     }
-
-    console.log(exp,Email,new Date().getTime())
-    const data= await User.findOne({email:Email})
-
-    console.log(data);
-    res.status(200).send({username:data.username,fullname:data.fullname,email:data.email})
+    try{
+        const {email:Email,exp}=jwt.verify(token,process.env.KEY)
+        if(new Date().getTime()/1000 > exp){
+            return res.status(401).send({message:"token expired"})
+        }
+    
+        // console.log(exp,Email,new Date().getTime())
+        const data= await User.findOne({email:Email})
+    
+        // console.log(data);
+        console.log("last")
+        res.status(200).send({username:data.username,fullname:data.fullname,email:data.email})
+    }catch(e){
+        console.log("hello erroe");
+        return res.status(401).send({message:e.message});
+    }
 })
 app.post('/signup',async(req,res)=>{
    

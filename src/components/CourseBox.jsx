@@ -47,7 +47,7 @@ let courses = [
 const CourseItem = ({key, selectedIndex, title, channelName, likes, image}) => {
 
 
-    const selectedCSS  = "";
+   let selectedCSS  = "";
 
     if(key==selectedIndex)
     {

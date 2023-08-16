@@ -1,17 +1,37 @@
 import React from 'react'
 import './LoginDivCSS.css'
+import { API } from '../assets/constant';
 
 const LoginDiv = () => {
-    const userdata = localStorage.getItem('userdata');
-    console.log("userdata : ",userdata);
+    const username = localStorage.getItem('username');
+    console.log("username : ",username);
     
+
+    const logout = async()=>{
+        const res=await fetch(`${API}/logout`)
+        const data=await res.json()
+        if(data.success){
+          localStorage.removeItem('token')
+          localStorage.removeItem('useremail');
+          localStorage.removeItem('username');
+          window.location.href="/login"
+        }
+        // ,{
+        //   method: 'GET',
+        //   credentials: 'include'
+        // })
+        // const data=await res.json()
+        // console.log(data)
+        // window.location.assign(`${API}/logout`)
+      }
+
   return (
     
     <div className="loginDivContainer absolute right-10 z-[100]">
         <div className="profContainer childlogindiv">
 
             <div className='userContainer'>
-                <h2>Dark Avenger</h2>
+                <h2>{(username != null) ? username : "User"}</h2>
             </div>
         </div>
 
@@ -62,7 +82,7 @@ const LoginDiv = () => {
                     <div className='optionImageContainer'>
                         <img src="https://cdn-icons-png.flaticon.com/512/3580/3580154.png"/>
                     </div>
-                    <div className="optionItem-name">
+                    <div className="optionItem-name" onClick={logout}>
                         <h2>Logout</h2>
                     </div>
                 </li>

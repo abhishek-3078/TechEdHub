@@ -10,7 +10,7 @@ import LoginDiv from "./components/LoginDiv";
 import Newsbox from "./components/Newsbox";
 import AdminPanel from "./components/adminpanel"
 
-import CourseBox from "./components/courseBox";
+// import CourseBox from "./components/courseBox";
 import CourseTemplate from "./components/CourseTemplate";
 import NavbarWrapper , {FooterWrapper} from "./components/NavbarWrapper";
 
@@ -31,7 +31,7 @@ function App() {
 
 
     {/* <StudentDashboard/> */}
-    <CourseTemplate/>
+    {/* <CourseTemplate/> */}
       </Routes>
     <FooterWrapper />
     </BrowserRouter>

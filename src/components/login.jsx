@@ -23,7 +23,6 @@ function Login() {
             const data=await res.json()
             console.log("afete",data)
             if(data.success){
-               
                 localStorage.setItem('token',data.token)
                 window.location.href="/"
             }

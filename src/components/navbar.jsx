@@ -84,23 +84,27 @@ const Navbar = () => {
     // Define the URL for the API endpoint
     const apiUrl =`${API}/getUser` ;
     const token=localStorage.getItem('token')
+    
     // Use the fetch function to make the request
     fetch(apiUrl,{
       headers:{
         "Authorization":token
       }
     }).then(response => {
-        if (!response.ok) {
+      
+        if (!response.ok) { 
           throw new Error('Network response was not ok');
         }
         return response.json();
       }).then(data => {
-        console.log(data)
+     
         // setData(data); // Update state with fetched data
-        localStorage.setItem({userdata : data});
+        localStorage.setItem('username',data.username);
+        localStorage.setItem('useremail',data.email);
         setUserName(data.fullname);
         setLoading(false); // Set loading to false
       }).catch(error => {
+        console.log("hafd")
         setError(error); // Set error state if the fetch fails
         setLoading(false); // Set loading to false
       });

@@ -11,21 +11,23 @@ const Home = () => {
       i = (i + 1) % i.length;
     }
   };
-  const logout = async()=>{
-    const res=await fetch(`${API}/logout`)
-    const data=await res.json()
-    if(data.success){
-      localStorage.removeItem('token')
-      window.location.href="/login"
-    }
-    // ,{
-    //   method: 'GET',
-    //   credentials: 'include'
-    // })
-    // const data=await res.json()
-    // console.log(data)
-    // window.location.assign(`${API}/logout`)
-  }
+  // const logout = async()=>{
+  //   const res=await fetch(`${API}/logout`)
+  //   const data=await res.json()
+  //   if(data.success){
+  //     localStorage.removeItem('token')
+  //     localStorage.removeItem('useremail');
+  //     localStorage.removeItem('username');
+  //     window.location.href="/login"
+  //   }
+  //   // ,{
+  //   //   method: 'GET',
+  //   //   credentials: 'include'
+  //   // })
+  //   // const data=await res.json()
+  //   // console.log(data)
+  //   // window.location.assign(`${API}/logout`)
+  // }
   const placeholders = [
     "javascript",
     "python",
@@ -105,7 +107,7 @@ const Home = () => {
               ea veritatis, quisquam omnis iure.
             </div>
             <div className="flex justify-center">
-              <div className="px-10 py-[18px] text-white text-3xl bg-green-500/80 active:bg-green-700 rounded-full " onClick={logout}>
+              <div className="px-10 py-[18px] text-white text-3xl bg-green-500/80 active:bg-green-700 rounded-full ">
                 LogOut
               </div>
             </div>
