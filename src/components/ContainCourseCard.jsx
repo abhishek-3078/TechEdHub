@@ -3,7 +3,7 @@ import CourseCard from "./CourseCard";
 
 const ContainCourseCard = (props) => {
     return (
-        <div className=" flex overflow-auto whitespace-nowrap w-[100%] p-2 ">
+        <div className=" flex overflow-x-auto whitespace-nowrap w-[100%] p-2 ">
             {
                 props.course.map((e,i) => {
                     console.log(e);

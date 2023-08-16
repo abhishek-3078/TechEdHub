@@ -2,6 +2,7 @@ import React from 'react'
 import './Newsbox_CSS.css'
 import NewsItemProp from './newsItem.json'
 
+
 const NewsItem = (props) => {
     const source = props.urlToImage;
     const title = props.title;
@@ -13,7 +14,7 @@ const NewsItem = (props) => {
                 <img  src={source}/>
                 <div class="newsItemHeading">
                     <a href={link}>
-                        <h2>{title}</h2>
+                        <p>{title}</p>
                     </a>
 
                 </div>
