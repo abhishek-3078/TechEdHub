@@ -1,0 +1,82 @@
+nav
+{
+    background-color: rgba(53,58,64,255);
+    height: 78px;
+    margin: 0px;
+    padding: 0px;
+
+    display: grid;
+    grid-template-columns: 0.9fr 5fr 1fr;
+}
+
+
+nav .logoContainer
+{
+    color: white;
+    /* background-color: aliceblue; */
+    height: 78px;
+}
+
+
+nav .logoContainer img
+{
+    width: 100%;
+    height: 100%;
+}
+
+
+nav .tabContainers
+{
+    color: rgba(249,252,252,255);
+    /* background-color: aquamarine; */
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 78px;
+}
+
+
+nav .tabContainers ul
+{
+
+
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+
+
+nav .tabContainers ul li
+{
+    box-sizing: border-box;
+    font-size: 20px;
+    /* font-style: italic; */
+    font-family: 'Courier New', Courier, monospace;
+    /* background-color: azure; */
+    padding: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+
+nav .tabContainers ul li:hover
+{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+
+
+.activeTab
+{
+    background-color: white;
+    color: black;
+}
+
+nav .tabContainers ul li:active
+{
+    background-color: grey;
+    color: black;
+}

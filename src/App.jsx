@@ -7,6 +7,7 @@ import "./App.css";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import LoginDiv from "./components/LoginDiv";
+import Newsbox from "./components/Newsbox";
 
 function App() {
   return (
@@ -25,7 +26,10 @@ function App() {
     // <Footer />
     // </BrowserRouter>
     // </>
-    <LoginDiv />
+    // // <LoginDiv />
+
+
+    <Navbar />
 
   )
 }

@@ -1,0 +1,80 @@
+[
+    {
+        "source": {
+            "id": "google-news",
+            "name": "Google News"
+        },
+        "author": "UC Today",
+        "title": "WhatsApp's Call Scheduling Closes the Gap on Teams and Zoom - UC Today",
+        "description": null,
+        "url": "https://news.google.com/rss/articles/CBMiamh0dHBzOi8vd3d3LnVjdG9kYXkuY29tL3VuaWZpZWQtY29tbXVuaWNhdGlvbnMvd2hhdHNhcHBzLWNhbGwtc2NoZWR1bGluZy1jbG9zZXMtdGhlLWdhcC1vbi10ZWFtcy1hbmQtem9vbS_SAQA?oc=5",
+        "urlToImage": null,
+        "publishedAt": "2023-08-14T12:14:57Z",
+        "content": null
+    },
+    {
+        "source": {
+            "id": "google-news",
+            "name": "Google News"
+        },
+        "author": "Forbes",
+        "title": "Don't Be Ashamed To Play 'Baldur's Gate 3' On Easy Mode - Forbes",
+        "description": null,
+        "url": "https://news.google.com/rss/articles/CBMiZmh0dHBzOi8vd3d3LmZvcmJlcy5jb20vc2l0ZXMvcGF1bHRhc3NpLzIwMjMvMDgvMTQvZG9udC1iZS1hc2hhbWVkLXRvLXBsYXktYmFsZHVycy1nYXRlLTMtb24tZWFzeS1tb2RlL9IBAA?oc=5",
+        "urlToImage": null,
+        "publishedAt": "2023-08-14T12:07:20Z",
+        "content": null
+    },
+    {
+        "source": {
+            "id": "google-news",
+            "name": "Google News"
+        },
+        "author": "The New Daily",
+        "title": "Apple’s iPhone 15 tipped to be most expensive yet - The New Daily",
+        "description": null,
+        "url": "https://news.google.com/rss/articles/CBMiOmh0dHBzOi8vdGhlbmV3ZGFpbHkuY29tLmF1L2xpZmUvdGVjaC8yMDIzLzA4LzE0L2lwaG9uZS0xNS_SAT5odHRwczovL3RoZW5ld2RhaWx5LmNvbS5hdS9saWZlL3RlY2gvMjAyMy8wOC8xNC9pcGhvbmUtMTUvYW1wLw?oc=5",
+        "urlToImage": null,
+        "publishedAt": "2023-08-14T12:01:10Z",
+        "content": null
+    },
+    {
+        "source": {
+            "id": "google-news",
+            "name": "Google News"
+        },
+        "author": "Letem světem Applem",
+        "title": "Nový Mac Pro neuspěl. Další jeho generace je v ohrožení - Letem světem Applem",
+        "description": null,
+        "url": "https://news.google.com/rss/articles/CBMiY2h0dHBzOi8vd3d3LmxldGVtc3ZldGVtYXBwbGVtLmV1LzIwMjMvMDgvMTQvbm92eS1tYWMtcHJvLW5ldXNwZWwtZGFsc2ktamVoby1nZW5lcmFjZS1qZS12LW9ocm96ZW5pL9IBAA?oc=5",
+        "urlToImage": null,
+        "publishedAt": "2023-08-14T12:00:02Z",
+        "content": null
+    },
+    {
+        "source": {
+            "id": "google-news",
+            "name": "Google News"
+        },
+        "author": "EL PAÍS",
+        "title": "Guerra Ucrania - Rusia: últimas noticias en directo | Rusia lanza una nueva oleada de drones y misiles contra Odesa - EL PAÍS",
+        "description": null,
+        "url": "https://news.google.com/rss/articles/CBMiYWh0dHBzOi8vZWxwYWlzLmNvbS9pbnRlcm5hY2lvbmFsLzIwMjMtMDgtMTQvZ3VlcnJhLXVjcmFuaWEtcnVzaWEtdWx0aW1hcy1ub3RpY2lhcy1lbi1kaXJlY3RvLmh0bWzSAXBodHRwczovL2VscGFpcy5jb20vaW50ZXJuYWNpb25hbC8yMDIzLTA4LTE0L2d1ZXJyYS11Y3JhbmlhLXJ1c2lhLXVsdGltYXMtbm90aWNpYXMtZW4tZGlyZWN0by5odG1sP291dHB1dFR5cGU9YW1w?oc=5",
+        "urlToImage": null,
+        "publishedAt": "2023-08-14T11:54:46Z",
+        "content": null
+    },
+    {
+        "source": {
+            "id": "google-news",
+            "name": "Google News"
+        },
+        "author": "▷ City Tv | Noticias",
+        "title": "Triple homicidio en una vivienda de San Cristóbal - ▷ City Tv | Noticias",
+        "description": null,
+        "url": "https://news.google.com/rss/articles/CBMiZmh0dHBzOi8vY2l0eXR2LmVsdGllbXBvLmNvbS9ub3RpY2lhcy9zZWd1cmlkYWQvdHJpcGxlLWhvbWljaWRpby1lbi11bmEtdml2aWVuZGEtZGUtc2FuLWNyaXN0b2JhbF82MjY4ONIBAA?oc=5",
+        "urlToImage": null,
+        "publishedAt": "2023-08-14T11:33:37Z",
+        "content": null
+    }
+]
