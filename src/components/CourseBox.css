@@ -1,0 +1,192 @@
+.searchBox
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 40px;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.searchBox input
+{
+    width:80%;
+    height: 40px;
+    border-radius: 10px;
+}
+
+
+.searchBox form
+{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+
+
+.searchBox button
+{
+    background-color: #57bd84;
+    width: 60%;
+    height: 100%;
+}
+
+
+.searchContainer
+{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.OuterCoursePanelBox
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 27%;
+}
+
+
+
+.CoursePanelContainer
+{
+    border: 2px solid white;
+    background-color: rgb(39, 38, 38);
+    width: 100%;
+    height: 700px;
+    border-radius: 20px;
+}
+
+
+
+.CoursePanelContainer h1
+{
+    color: white;
+    font-family:'Courier New', Courier, monospace;
+    text-align: center;
+    background-color: black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+.CoursePanel
+{
+    background-color: rgb(39, 38, 38);
+    width: 100%;
+    height: 700px;
+
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+
+    overflow-y: scroll;
+    overflow-x: hidden;
+    
+}
+
+
+.CourseItem
+{
+    width:90%;
+    background-color: black;
+    border: 2px solid white;
+    padding: 10px;
+    margin-top: 20px;
+
+    display: flex;
+}
+
+
+.selectedCourseCSS
+{
+    width:90%;
+    background-color: rgb(41, 39, 39);
+    border: 2px solid white;
+    padding: 10px;
+    margin-top: 20px;
+
+    display: flex;
+}
+
+
+.CourseItemImage
+{
+    width: 50%;
+    background-color: grey;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.CourseItemImage img
+{
+    border-radius: 20px;
+    width: 168px;
+    height: 94px;
+}
+
+
+
+.CourseItemInfo
+{
+    width: 50%;
+    height: 100px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.CourseItem .CourseTitle
+{
+    white-space: nowrap;
+    font-weight: bold;
+    font-size: 15px;
+    overflow: hidden;
+}
+
+
+
+.coursedata
+{
+    padding-left: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    color: white;
+
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+
+.CoursePanel::-webkit-scrollbar {
+    width: 10px;
+    height: 95%;
+  }
+  
+  .CoursePanel::-webkit-scrollbar-track {
+    background-color: #e4e4e4;
+    border-radius: 100px;
+  }
+  
+  .CoursePanel::-webkit-scrollbar-thumb {
+    background-color: #d4aa70;
+    border-radius: 100px;
+  }
