@@ -90,8 +90,8 @@ const Navbar = () => {
 
       <div className='loginSign_UpContainer'>
         <div class="container">
-            <button class="log">Login</button>
-            <button class="reg">Sign up</button>
+           <Link to="/login"><button class="log">Login</button></Link> 
+            <Link to="/signup"><button class="reg">Sign up</button></Link>
         </div>
       </div>
     </nav>

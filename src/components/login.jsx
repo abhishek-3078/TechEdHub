@@ -1,4 +1,5 @@
 import './login.css';
+import { API } from '../assets/constant';
 function Login() {
     const url='http://'
     const handleSubmit=async()=>{
@@ -8,7 +9,7 @@ function Login() {
         <div className='body'>
             <img src="http://wallpapercave.com/wp/ntYEFqo.jpg" alt="" />
             <div className="wrapper">
-                <form action="http://localhost:3000/login" method="post" id="loginForm" >
+                <form action={`${API}/login`} method="post" id="loginForm" >
                     <h1>Login</h1>
                     <div className="input-box">
                         <input
