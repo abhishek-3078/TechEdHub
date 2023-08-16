@@ -4,11 +4,13 @@ import viteLogo from "/vite.svg";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import {Home,RoadMap,Login,SignUp} from './components'
 import "./App.css";
+import Navbar from "./components/navbar";
+import Footer from "./components/footer";
+import LoginDiv from "./components/LoginDiv";
+import Newsbox from "./components/Newsbox";
 
-import Navbar from "./components/Navbar"
-import Footer from "./components/Footer"
 import AdminPanel from "./components/adminpanel"
-import StudentDashboard from "./components/SubjectDashboard";
+import CourseBox from "./components/courseBox";
 import CourseTemplate from "./components/CourseTemplate";
 
 function App() {

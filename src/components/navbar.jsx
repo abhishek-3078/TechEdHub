@@ -41,13 +41,11 @@ const NavOption = ({name, link, tabActive, handleClick}) => {
 
   console.log(name, tabActive)
 
-  return <>
-          <a href='#'>
+  return (<>
             <li className={tabActive===id? "activeTab" : ""} onClick={() => {handleClick(id);}}>
               {name}
             </li>
-          </a>
-        </>
+        </>)
 }
 
 
@@ -90,7 +88,10 @@ const Navbar = () => {
 
 
       <div className='loginSign_UpContainer'>
-
+        <div class="container">
+            <button class="log">Login</button>
+            <button class="reg">Sign up</button>
+        </div>
       </div>
     </nav>
 
