@@ -23,13 +23,13 @@ const CourseCard = (props) => {
 
     return (
 
-        <div className="card min-w-[250px] flex rounded-lg bg-secondary hover:scale-105 ease-in-out duration-300 mt-2 mr-5 shadow hover:shadow-lg " onMouseOver={()=>{setShowInfo(false)}} onMouseOut={()=>{setShowInfo(true)}}>
+        <div className="card min-w-[250px] w-[250px] flex rounded-lg bg-secondary hover:scale-105 ease-in-out duration-300 mt-2 mb-2 mr-5 shadow hover:shadow-lg shrink-0	" onMouseOver={()=>{setShowInfo(false)}} onMouseOut={()=>{setShowInfo(true)}}>
             <img src= {props.Image} className="card-img-top w-[250px] h-[200px]" alt="..." />
 
             <div className="card-body">
-                <div className="flex justify-between mb-2">
+                <div className="flex justify-between">
                     <p className="text-white text-sm flex"><TfiStatsUp size={17} /><p className="ml-2">{props.Views}+</p></p>
-                    <p className="text-white text-sm flex border-solid border-2 border-gray-600 p-1 rounded-md"><AiFillStar color={starColor} size={20} /><p className="ml-1 ">{props.CourseRating}</p></p>
+                    <p className="text-white text-sm h-8 flex border-solid border-2 border-gray-600 p-1 rounded-md"><AiFillStar color={starColor} size={20} /><p>{props.CourseRating}</p></p>
                 </div>
                 <p className="text-lg text-white">{props.CourseName}</p>
                 <div className="flex text-white mt-2">

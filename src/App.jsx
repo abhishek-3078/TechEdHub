@@ -16,9 +16,10 @@ import CourseBox from "./components/courseBox";
 function App() {
   return (
     <>
-    {/* <BrowserRouter>
-    // <Navbar />
-      <Routes> */}
+    {/* <Navbar/>
+    <BrowserRouter> */}
+    {/* <Navbar /> */}
+      {/* <Routes> */}
       
         {/* <Route path="/" element={<Layout />}> */}
           {/* <Route path="/userprofile/:user" element={<AdminPanel/>}></Route>
@@ -34,15 +35,9 @@ function App() {
         {/* </Route> */}
       {/* </Routes>
     <Footer />
-
-
-
-
     </BrowserRouter> */}
 
-
-    <Navbar />
-
+    <StudentDashboard/>
     </>
 
 
