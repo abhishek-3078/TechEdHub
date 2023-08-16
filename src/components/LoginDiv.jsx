@@ -2,16 +2,13 @@ import React from 'react'
 import './LoginDivCSS.css'
 
 const LoginDiv = () => {
+    const userdata = localStorage.getItem('userdata');
+    console.log("userdata : ",userdata);
+    
   return (
-    <div className="loginDivContainer">
+    
+    <div className="loginDivContainer absolute right-10 z-[100]">
         <div className="profContainer childlogindiv">
-
-            <div className="profImgOuterBox">
-
-                <div className="profImgContainer">
-                    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="profImage" />
-                </div>
-            </div>
 
             <div className='userContainer'>
                 <h2>Dark Avenger</h2>
