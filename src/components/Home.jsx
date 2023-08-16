@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { API } from "../assets/constant";
+import LoginDiv from "./LoginDiv";
 
 
 const Home = () => {
@@ -10,14 +11,20 @@ const Home = () => {
       i = (i + 1) % i.length;
     }
   };
-  const logou = async()=>{
-    // const res=await fetch("http://localhost:3000/logout",{
+  const logout = async()=>{
+    const res=await fetch(`${API}/logout`)
+    const data=await res.json()
+    if(data.success){
+      localStorage.removeItem('token')
+      window.location.href="/login"
+    }
+    // ,{
     //   method: 'GET',
     //   credentials: 'include'
     // })
     // const data=await res.json()
     // console.log(data)
-    window.location.assign(`${API}/logout`)
+    // window.location.assign(`${API}/logout`)
   }
   const placeholders = [
     "javascript",
@@ -65,6 +72,7 @@ const Home = () => {
     <div>
       <main className=" bg-primary1 relative  ">
         <div className="p-4 flex flex-col justify-evenly relative overflow-hidden bg-none">
+        <LoginDiv/>
           <div className=" absolute h-full w-[2400px] top-0   left-0 ">
             <video autoPlay muted loop className=" w-border-2  ">
               <source src="/videos/video_bg.mp4" type="video/mp4" />

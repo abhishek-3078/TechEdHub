@@ -1,7 +1,7 @@
 import React from "react";
 import AllCourses from './AllCourses';
 import Newsbox from './Newsbox';
-import Navbar from "./Navbar";
+import Navbar from "./navbar";
 
 const StudentDashboard = () => {
     return (
