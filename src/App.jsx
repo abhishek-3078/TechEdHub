@@ -19,12 +19,12 @@ function App() {
       <Routes>
       
         {/* <Route path="/" element={<Layout />}> */}
-          <Route path="/userprofile/:user" element={<AdminPanel/>}></Route>
+          {/* <Route path="/userprofile/:user" element={<AdminPanel/>}></Route>
 
           <Route index element={<Home />} />
           <Route path="/course/:slug" element={<RoadMap/>}/>
           <Route path ="/login" element={<Login/>}/>
-          <Route path ="/signup" element={<SignUp/>}/>
+          <Route path ="/signup" element={<SignUp/>}/> */}
 
           {/* <Route path="blogs" element={<Blogs />} />
           <Route path="contact" element={<Contact />} />

@@ -42,13 +42,11 @@ const NavOption = ({name, link, tabActive, handleClick}) => {
 
   console.log(name, tabActive)
 
-  return <>
-          <a href='#'>
+  return (<>
             <li className={tabActive===id? "activeTab" : ""} onClick={() => {handleClick(id);}}>
               {name}
             </li>
-          </a>
-        </>
+        </>)
 }
 
 
@@ -91,8 +89,10 @@ const Navbar = () => {
 
 
       <div className='loginSign_UpContainer'>
-      <Link to='/login' className='no-underline'>login</Link>
-      <Link to='/signup' className='no-underline  '>Sign Up</Link>
+        <div class="container">
+            <button class="log">Login</button>
+            <button class="reg">Sign up</button>
+        </div>
       </div>
     </nav>
 
