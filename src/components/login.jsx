@@ -1,15 +1,43 @@
 import './login.css';
 import { API } from '../assets/constant';
+import { useState } from 'react';
 function Login() {
-    const url='http://'
-    const handleSubmit=async()=>{
-    //    const res= await fetch(url)
+    const [email,setEmail]=useState('')
+    const [password,setPassword]=useState('')
+    console.log("Step1")
+    const handleSubmit=async(e)=>{
+        e.preventDefault()
+        console.log("inside")
+        try{
+            const res= await fetch(`${API}/login`,{
+                method:"POST",
+                headers: {
+                    'Content-Type': 'application/json' 
+                },
+                body:JSON.stringify({
+                    email: email,
+                    password: password
+                })
+            }
+            )
+            const data=await res.json()
+            console.log("afete",data)
+            if(data.success){
+               
+                localStorage.setItem('token',data.token)
+                window.location.href="/"
+            }
+        }catch(e){
+            console.log("hello")
+              
+        }
+     
     }
     return (
         <div className='body'>
             <img src="http://wallpapercave.com/wp/ntYEFqo.jpg" alt="" />
             <div className="wrapper">
-                <form action={`${API}/login`} method="post" id="loginForm" >
+                <form method="post" id="loginForm" onClick={handleSubmit} >
                     <h1>Login</h1>
                     <div className="input-box">
                         <input
@@ -17,6 +45,8 @@ function Login() {
                             placeholder="Enter your email"
                             autoComplete="off"
                             name="email"
+                            value={email}
+                            onChange={(e)=>setEmail(e.target.value)}
                             
                         />
                         <img
@@ -30,6 +60,8 @@ function Login() {
                             placeholder="Enter password"
                             name="password"
                             required=""
+                            value={password}
+                            onChange={(e)=>setPassword(e.target.value)}
                         />
                         <img
                             src="https://cdn-icons-png.flaticon.com/128/1828/1828471.png"
