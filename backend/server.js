@@ -8,7 +8,7 @@ var jwt = require('jsonwebtoken');
 require('dotenv').config()
 const User=require('./schema/user')
 
-const PORT = 3000;
+const PORT = process.env.PORT||3000;
 require('./db')
 app.use(cors())
 app.use(express.urlencoded())
