@@ -35,11 +35,10 @@ function App() {
           <Route path ="/home" element={<SubjectDashboard/>}/>
 
 
-    {/* <StudentDashboard/> */}
-
       </Routes>
     <FooterWrapper />
     </BrowserRouter>
+    {/* <CourseTemplate/> */}
     </>
   )
 }

@@ -117,6 +117,7 @@ const Home = () => {
             <div className="flex justify-center">
 
 
+
               <Link to="/home" className="no-underline">
               <div className="px-10 py-[18px] text-white text-3xl cursor-pointer bg-green-500/80 active:bg-green-700 rounded-full  " >
                 Get Started
