@@ -10,13 +10,16 @@ import LoginDiv from "./components/LoginDiv";
 import Newsbox from "./components/Newsbox";
 import AdminPanel from "./components/adminpanel"
 
-import CourseBox from "./components/courseBox";
+// import CourseBox from "./components/courseBox";
 import CourseTemplate from "./components/CourseTemplate";
+
 import NavbarWrapper , {FooterWrapper} from "./components/NavbarWrapper";
 import SubjectDashboard from "./components/SubjectDashboard";
 
 
+
 function App() {
+
   return (
     <>
     <BrowserRouter>
@@ -33,7 +36,7 @@ function App() {
 
 
     {/* <StudentDashboard/> */}
-    
+
       </Routes>
     <FooterWrapper />
     </BrowserRouter>

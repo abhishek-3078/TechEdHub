@@ -47,6 +47,7 @@ color: rgb(47, 141, 70);
 
 .icn {
 height: 30px;
+width:30px;
 }
 .menuicn {
 cursor: pointer;
@@ -183,9 +184,12 @@ width: 250px;
 height: 60px;
 display: flex;
 align-items: center;
+gap:20px;
 padding: 0 30px 0 20px;
-gap: 20px;
 transition: all 0.1s ease-in-out;
+}
+.nav-option h3{
+font-size: 20px;
 }
 .nav-option:hover {
 border-left: 5px solid #a2a2a2;
@@ -193,14 +197,15 @@ background-color: #dadada;
 cursor: pointer;
 }
 .nav-img {
-height: 30px;
+height: 40px;
+width:40px;
 }
 
 .nav-upper-options {
 display: flex;
 flex-direction: column;
 align-items: center;
-gap: 30px;
+gap: 10px;
 }
 
 .option1 {
@@ -244,6 +249,7 @@ background-color: var(--two-use-color);
 
 .box img {
 height: 50px;
+width:50px;
 }
 .box .text {
 color: white;
