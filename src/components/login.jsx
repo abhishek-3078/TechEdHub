@@ -1,5 +1,6 @@
 import './login.css';
 import { API } from '../assets/constant';
+import { Link } from 'react-router-dom';
 import { useState } from 'react';
 function Login() {
     const [email,setEmail]=useState('')
@@ -34,6 +35,11 @@ function Login() {
     }
     return (
         <div className='body'>
+            <div class="logoContainerInLogin">
+                <Link to="/">
+                    <img src="src\components\TechEdHubLogo-fotor-bg-remover-2023081622354.png" />
+                </Link>
+            </div>
             <img src="http://wallpapercave.com/wp/ntYEFqo.jpg" alt="" />
             <div className="wrapper">
                 <form method="post" id="loginForm" onClick={handleSubmit} >

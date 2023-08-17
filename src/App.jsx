@@ -12,10 +12,11 @@ import AdminPanel from "./components/adminpanel"
 
 // import CourseBox from "./components/courseBox";
 import CourseTemplate from "./components/CourseTemplate";
-import NavbarWrapper , {FooterWrapper} from "./components/NavbarWrapper";
+import NavbarWrapper , {FooterWrapper,UserProfileWrapper} from "./components/NavbarWrapper";
 
 
 function App() {
+
   return (
     <>
     <BrowserRouter>

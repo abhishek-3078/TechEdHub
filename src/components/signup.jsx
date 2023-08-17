@@ -1,12 +1,14 @@
 import { API } from '../assets/constant';
 import './signup.css';
+import { Link } from 'react-router-dom';
 function SignUp() {
     return (
         <div className='body'>
             <img src="http://wallpapercave.com/wp/ntYEFqo.jpg" alt="" />
             <div id="logo">
-                <img src="https://cdn-icons-png.flaticon.com/128/1384/1384079.png" alt="" />
-                <h1>MyChat</h1>
+                <Link to="/">
+                    <img src="src\components\TechEdHubLogo-fotor-bg-remover-2023081622354.png" alt="" />
+                </Link>
             </div>
             <div className="wrapper">
                 <form action={`${API}/signup`} method="post" id="loginForm">

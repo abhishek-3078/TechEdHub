@@ -1,10 +1,11 @@
 import React from 'react'
 import './LoginDivCSS.css'
 import { API } from '../assets/constant';
+import { Link } from 'react-router-dom';
 
 const LoginDiv = () => {
     const username = localStorage.getItem('username');
-    console.log("username : ",username);
+    // console.log("username : ",username);
     
 
     const logout = async()=>{
@@ -38,14 +39,15 @@ const LoginDiv = () => {
 
         <div className="optionContainer childlogindiv">
             <ul>
-                <li className="optionItem">
+                <Link to ={`/userprofile/${username}`} className='no-underline'><li className="optionItem ">
                     <div  className='optionImageContainer' >
                         <img src="https://media.geeksforgeeks.org/img-practice/user_web-1598433228.svg"/>
                     </div>
-                    <div className="optionItem-name">
-                        <h2>My Profile</h2>
+                    <div className="optionItem-name ">
+                        <h2 >My Profile</h2>
                     </div>
                 </li>
+                </Link>
                 <li className="optionItem">
                     <div className='optionImageContainer'>
                         <img src="https://img.freepik.com/free-icon/books_318-761759.jpg?w=2000"/>

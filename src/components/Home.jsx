@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
-import { API } from "../assets/constant";
+// import { API } from "../assets/constant";
 import LoginDiv from "./LoginDiv";
-
+import { useCounter } from "./contextProvider";
 
 const Home = () => {
+  const {loginDivDisplay,setloginDivDisplay}=useCounter()
   const [inputValue, setInputValue] = useState("");
   const [searchPlaceholder, setSearchPlaceholder] = useState("");
   const func = (i, j) => {
@@ -74,7 +75,7 @@ const Home = () => {
     <div>
       <main className=" bg-primary1 relative  ">
         <div className="p-4 flex flex-col justify-evenly relative overflow-hidden bg-none">
-        <LoginDiv/>
+        {loginDivDisplay ? <LoginDiv/>:<></>}
           <div className=" absolute h-full w-[2400px] top-0   left-0 ">
             <video autoPlay muted loop className=" w-border-2  ">
               <source src="/videos/video_bg.mp4" type="video/mp4" />
@@ -100,15 +101,13 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className=" md:p-14 font-sans text-3xl text-white text-center">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui,
-              molestias nulla! Dolores iusto nesciunt officia itaque a fuga
-              voluptatem deserunt molestias consequatur voluptate ad blanditiis
-              ea veritatis, quisquam omnis iure.
+            <div className=" md:p-14 font-sans text-3xl text-white text-center leading-[50px]">
+              Find all and the best roadmaps, methods and guidance for learning
+              just about anything in Technology!
             </div>
             <div className="flex justify-center">
               <div className="px-10 py-[18px] text-white text-3xl bg-green-500/80 active:bg-green-700 rounded-full ">
-                LogOut
+                Get Started              
               </div>
             </div>
           </div>
@@ -130,12 +129,9 @@ const Home = () => {
               <div className="h-full w-[1px] bg-white"></div>
             </div>
             <div className="text-white p-4 w-[48%]">
-              <h3>lorem ipsum</h3>
+              <h3>Courses Ranking</h3>
               <p className=" text-xl">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-                ipsum quidem nesciunt ab unde possimus suscipit, veritatis
-                libero doloribus exercitationem repellendus facilis esse sit
-                ratione modi necessitatibus sunt, labore laborum.
+              Users can access authentic reviews and ratings from fellow learners who have completed the courses. This feature helps individuals make informed decisions about the quality and relevance of each course.
               </p>
             </div>
           </div>
@@ -143,12 +139,9 @@ const Home = () => {
         <div className="flex flex-col lg:px-20 xl:px-40">
           <div className="flex ">
           <div className="text-white p-4 w-[48%]">
-              <h3>lorem ipsum</h3>
+              <h3>Community and Discussion Forums</h3>
               <p className=" text-xl">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-                ipsum quidem nesciunt ab unde possimus suscipit, veritatis
-                libero doloribus exercitationem repellendus facilis esse sit
-                ratione modi necessitatibus sunt, labore laborum.
+                TechEdHub will foster a vibrant learning community where users can interact, collaborate, and seek help from peers and instructors. Discussion forums will facilitate knowledge-sharing and networking among learners.
               </p>
             </div>
             <div className="flex flex-col items-center">
@@ -181,12 +174,9 @@ const Home = () => {
               <div className="h-full w-[1px] bg-white"></div>
             </div>
             <div className="text-white p-4 w-[48%]">
-              <h3>lorem ipsum</h3>
+              <h3>Industry Insights</h3>
               <p className=" text-xl">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-                ipsum quidem nesciunt ab unde possimus suscipit, veritatis
-                libero doloribus exercitationem repellendus facilis esse sit
-                ratione modi necessitatibus sunt, labore laborum.
+              The platform will feature blogs, articles, and interviews with industry experts, providing users with insights into emerging trends, best practices, and real-world applications of technology.
               </p>
             </div>
           </div>
