@@ -1,7 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 // import { API } from "../assets/constant";
 import LoginDiv from "./LoginDiv";
+
 import { useCounter } from "./contextProvider";
+
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const {loginDivDisplay,setloginDivDisplay}=useCounter()
@@ -12,23 +15,29 @@ const Home = () => {
       i = (i + 1) % i.length;
     }
   };
-  // const logout = async()=>{
-  //   const res=await fetch(`${API}/logout`)
-  //   const data=await res.json()
-  //   if(data.success){
-  //     localStorage.removeItem('token')
-  //     localStorage.removeItem('useremail');
-  //     localStorage.removeItem('username');
-  //     window.location.href="/login"
-  //   }
-  //   // ,{
-  //   //   method: 'GET',
-  //   //   credentials: 'include'
-  //   // })
-  //   // const data=await res.json()
-  //   // console.log(data)
-  //   // window.location.assign(`${API}/logout`)
-  // }
+
+
+
+  const logout = async()=>{
+   
+    const res=await fetch(`${API}/logout`)
+    const data=await res.json()
+    if(data.success){
+      localStorage.removeItem('token')
+      window.location.href="/login"
+    }
+    // ,{
+    //   method: 'GET',
+    //   credentials: 'include'
+    // })
+    // const data=await res.json()
+    // console.log(data)
+    // window.location.assign(`${API}/logout`)
+  }
+  const handleClick=()=>{
+    window.open(`/course/${inputValue}`,'_self')
+  }
+
   const placeholders = [
     "javascript",
     "python",
@@ -96,7 +105,7 @@ const Home = () => {
                   placeholder={searchPlaceholder}
                   className="bg-white/20 p-3 rounded-l-[0.375rem] text-2xl text-white border-b-2 border-primary1 w-[400px]  pl-4"
                 />
-                <div className="bg-primary1 text-2xl text-white p-3 rounded-r-[0.375rem]">
+                <div className="bg-primary1 text-2xl text-white p-3 rounded-r-[0.375rem]" onClick={handleClick}>
                   Search
                 </div>
               </div>
@@ -106,9 +115,14 @@ const Home = () => {
               just about anything in Technology!
             </div>
             <div className="flex justify-center">
-              <div className="px-10 py-[18px] text-white text-3xl bg-green-500/80 active:bg-green-700 rounded-full ">
-                Get Started              
+
+
+              <Link to="/home" className="no-underline">
+              <div className="px-10 py-[18px] text-white text-3xl cursor-pointer bg-green-500/80 active:bg-green-700 rounded-full  " >
+                Get Started
               </div>
+              </Link>
+
             </div>
           </div>
         </div>

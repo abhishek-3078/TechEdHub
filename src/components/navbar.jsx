@@ -10,7 +10,7 @@ import { useCounter } from './contextProvider';
 let arrayOfTabs = [
   {
     'name': 'Home',
-    'link': '#'
+    'link': '/'
   },
   {
     'name': 'About Us',
@@ -123,7 +123,7 @@ const Navbar = () => {
   return (
     <nav>
       <div className='logoContainer'>
-        <Logo link="#"/>
+        <Logo link="/"/>
       </div>
 
       <div className='tabContainers'>

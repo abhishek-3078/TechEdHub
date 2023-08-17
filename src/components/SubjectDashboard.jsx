@@ -3,10 +3,9 @@ import AllCourses from './AllCourses';
 import Newsbox from './Newsbox';
 import Navbar from "./navbar";
 
-const StudentDashboard = () => {
+const SubjectDashboard = () => {
     return (
         <>
-        <Navbar/>
         <div className="flex justify-between p-3">
             <AllCourses />
             <Newsbox />
@@ -16,4 +15,4 @@ const StudentDashboard = () => {
     )
 }
 
-export default StudentDashboard;
+export default SubjectDashboard;

@@ -12,7 +12,10 @@ import AdminPanel from "./components/adminpanel"
 
 // import CourseBox from "./components/courseBox";
 import CourseTemplate from "./components/CourseTemplate";
-import NavbarWrapper , {FooterWrapper,UserProfileWrapper} from "./components/NavbarWrapper";
+
+import NavbarWrapper , {FooterWrapper} from "./components/NavbarWrapper";
+import SubjectDashboard from "./components/SubjectDashboard";
+
 
 
 function App() {
@@ -26,13 +29,14 @@ function App() {
           <Route path="/userprofile/:user" element={<AdminPanel/>}></Route>
 
           <Route index element={<Home />} />
-          <Route path="/course/:slug" element={<RoadMap/>}/>
+          <Route path="/course/:slug" element={<CourseTemplate/>}/>
           <Route path ="/login" element={<Login/>}/>
           <Route path ="/signup" element={<SignUp/>}/>
+          <Route path ="/home" element={<SubjectDashboard/>}/>
 
 
     {/* <StudentDashboard/> */}
-    {/* <CourseTemplate/> */}
+
       </Routes>
     <FooterWrapper />
     </BrowserRouter>
