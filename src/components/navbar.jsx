@@ -28,9 +28,9 @@ const Logo = (props) => {
   const link = props.link;
   
   return (
-    <a href={link}>
+    <a href='/'>
 
-      <img src="https://i0.wp.com/edtechhub.org/wp-content/uploads/2022/01/EdTech-Hub-Logotype-WM-4.png?fit=400%2C173&ssl=1" alt="Tech Ed Hub" />
+      <img src="src\components\TechEdHubLogo-fotor-bg-remover-2023081622354.png" alt="Tech Ed Hub" />
     </a>
   )
 }
