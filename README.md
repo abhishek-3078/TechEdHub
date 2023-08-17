@@ -1,3 +1,18 @@
+# for starting
+```bash
+git clone https://github.com/abhishek-3078/TechEdHub.git
+npm install
+npm run dev
+```
+for using your own mongodb as a backend go to `components/constant.js` and change API to localhost:3000 and run below command
+```bash
+git clone https://github.com/abhishek-3078/TechEdHub.git
+npm install
+npm run dev
+cd backend
+npm install
+node server.js
+```
 # Overview:
 TechEdHub is a comprehensive website designed to provide users with easy access to a wide range of tech-related courses and learning resources. It aims to cater to tech enthusiasts, students, and professionals seeking to enhance their skills, stay updated with the latest technologies, and embark on a continuous learning journey.
 
