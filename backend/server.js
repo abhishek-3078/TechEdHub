@@ -7,13 +7,27 @@ const cookieParser = require('cookie-parser');
 const jwt = require('jsonwebtoken');
 require('dotenv').config()
 const User=require('./schema/user')
-
+const Reply=require('./schema/reply')
 const PORT = process.env.PORT||3000;
 require('./db')
 app.use(cors())
 app.use(express.urlencoded())
 app.use(express.json())
 app.use(cookieParser());
+
+const authenticate=async (req,res,next)=>{
+    const token = req.header('Authorization');
+    if(!token || token=='null') return res.status(401).send()
+    try{
+    const {email}=jwt.verify(token,process.env.KEY)
+    const user=await User.findOne({email})
+    req.user=user
+    next()
+}catch (error) {
+    return res.status(401).json({ error: error.message });
+  }
+
+}
 
 app.get('/',(req,res)=>{
     res.send("hello");
@@ -22,7 +36,7 @@ app.get('/',(req,res)=>{
 app.get('/getUser',async (req,res)=>{
     const token=req.headers.authorization
 
-    if(!token) return res.status(401).send()
+    if(token=='null') return res.status(401).send()
     const {email:Email,exp}=jwt.verify(token,process.env.KEY)
     if(new Date().getTime()/1000 > exp){
         return res.status(401).send({message:"token expired"})
@@ -34,6 +48,7 @@ app.get('/getUser',async (req,res)=>{
     console.log(data);
     res.status(200).send({username:data.username,fullname:data.fullname,email:data.email})
 })
+
 app.post('/signup',async(req,res)=>{
    
     
@@ -96,6 +111,30 @@ app.get('/logout',(req,res)=>{
     // res.cookie('token',"",{expires: new Date(0)})
     // res.cookie('token',"abhishek",{maxAge:10})
     // res.clearCookie('token')
+})
+
+app.get('/getComments',async(req,res)=>{
+    const {post}=req.query
+    console.log("post",post)
+    const data=await Reply.find({post},'-author.id -_id -__v -createdAt').sort({createdAt:-1})
+    console.log(data)
+    res.send({data:data})
+})
+app.post('/reply',authenticate,async (req,res)=>{
+    const {message,post}=req.body
+    const data=new Reply({
+        text:message,
+        author:{
+            id:req.user.id,
+            username:req.user.username
+        },
+        post
+    })
+    console.log(data)
+    await data.save()
+    res.send({message:"pahuch gya"})
+
+    
 })
 app.listen(3000,()=>{
     console.log(`server is listeing on the port ${PORT}`);
