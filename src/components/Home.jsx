@@ -1,9 +1,13 @@
 import React, { useState, useEffect, useRef } from "react";
-import { API } from "../assets/constant";
+// import { API } from "../assets/constant";
 import LoginDiv from "./LoginDiv";
 
+import { useCounter } from "./contextProvider";
+
+import { Link } from "react-router-dom";
 
 const Home = () => {
+  const {loginDivDisplay,setloginDivDisplay}=useCounter()
   const [inputValue, setInputValue] = useState("");
   const [searchPlaceholder, setSearchPlaceholder] = useState("");
   const func = (i, j) => {
@@ -11,7 +15,11 @@ const Home = () => {
       i = (i + 1) % i.length;
     }
   };
+
+
+
   const logout = async()=>{
+   
     const res=await fetch(`${API}/logout`)
     const data=await res.json()
     if(data.success){
@@ -26,6 +34,10 @@ const Home = () => {
     // console.log(data)
     // window.location.assign(`${API}/logout`)
   }
+  const handleClick=()=>{
+    window.open(`/course/${inputValue}`,'_self')
+  }
+
   const placeholders = [
     "javascript",
     "python",
@@ -72,7 +84,7 @@ const Home = () => {
     <div>
       <main className=" bg-primary1 relative  ">
         <div className="p-4 flex flex-col justify-evenly relative overflow-hidden bg-none">
-        <LoginDiv/>
+        {loginDivDisplay ? <LoginDiv/>:<></>}
           <div className=" absolute h-full w-[2400px] top-0   left-0 ">
             <video autoPlay muted loop className=" w-border-2  ">
               <source src="/videos/video_bg.mp4" type="video/mp4" />
@@ -93,7 +105,7 @@ const Home = () => {
                   placeholder={searchPlaceholder}
                   className="bg-white/20 p-3 rounded-l-[0.375rem] text-2xl text-white border-b-2 border-primary1 w-[400px]  pl-4"
                 />
-                <div className="bg-primary1 text-2xl text-white p-3 rounded-r-[0.375rem]">
+                <div className="bg-primary1 text-2xl text-white p-3 rounded-r-[0.375rem]" onClick={handleClick}>
                   Search
                 </div>
               </div>
@@ -103,8 +115,15 @@ const Home = () => {
               just about anything in Technology!
             </div>
             <div className="flex justify-center">
-              <div className="px-10 py-[18px] text-white text-3xl bg-green-500/80 active:bg-green-700 rounded-full " onClick={logout}>
-                Get Started              </div>
+
+
+
+              <Link to="/home" className="no-underline">
+              <div className="px-10 py-[18px] text-white text-3xl cursor-pointer bg-green-500/80 active:bg-green-700 rounded-full  " >
+                Get Started
+              </div>
+              </Link>
+
             </div>
           </div>
         </div>
