@@ -105,7 +105,7 @@ const Home = () => {
                   placeholder={searchPlaceholder}
                   className="bg-white/20 p-3 rounded-l-[0.375rem] text-2xl text-white border-b-2 border-primary1 w-[400px]  pl-4"
                 />
-                <div className="bg-primary1 text-2xl text-white p-3 rounded-r-[0.375rem]" onClick={handleClick}>
+                <div className="bg-primary1 text-2xl cursor-pointer text-white p-3 rounded-r-[0.375rem]" onClick={handleClick}>
                   Search
                 </div>
               </div>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import RoadMap from "./RoadMap";
 import Navbar from "./navbar";
-import CourseBox from "./courseBox";
+import CourseBox from "./CourseBox";
 import { BiUpvote, BiSolidUpvote, BiDownvote, BiSolidDownvote } from "react-icons/bi";
 import { AiOutlineSend } from "react-icons/ai";
 import DocumentBox from "./DocumentBox";
