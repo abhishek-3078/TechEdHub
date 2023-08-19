@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { API } from '../assets/constant';
 import LoginDiv from "./LoginDiv";
 import { useCounter } from './contextProvider';
+import myImage from "./Techedhub-removebg-preview.png"
 
 
 
@@ -31,7 +32,8 @@ const Logo = (props) => {
   return (
     <a href='/'>
 
-      <img src="src\components\TechEdHubLogo-fotor-bg-remover-2023081622354.png" alt="Tech Ed Hub" />
+<img src={myImage} alt="Tech Ed Hub" />
+
     </a>
   )
 }
